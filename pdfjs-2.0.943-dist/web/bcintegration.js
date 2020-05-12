@@ -15,7 +15,7 @@ window.addEventListener("webviewerloaded", function(event) {
 
 function BCLoadDocument(data) {
     var content = data.content;
-    if (data.type = 'base64') {
+    if (data.type == 'base64') {
         content = base64ToUint8Array(content);
     };
     PDFViewerApplication.open(content).then(function() {
